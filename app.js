@@ -1,13 +1,14 @@
-const options = {
+const OPTIONS = {
 	method: 'GET',
 	headers: {
 		'X-RapidAPI-Key': 'ed249dce58msh02539d0621d96f4p158270jsn60f63d5cbaed',
-		'X-RapidAPI-Host': 'ip-geo-location.p.rapidapi.com'
+		'X-RapidAPI-Host': 'ip-reputation-geoip-and-detect-vpn.p.rapidapi.com'
 	}
 };
 
+
 const fetchIpInfo = ip => {
-    return fetch(`https://ip-geo-location.p.rapidapi.com/${ip}`, options)
+    return fetch(`https://ip-reputation-geoip-and-detect-vpn.p.rapidapi.com/?${ip}`, OPTIONS)
     .then(res => res.json())
     .catch(err => console.error(err))
 }
