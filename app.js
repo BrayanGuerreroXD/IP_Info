@@ -6,7 +6,6 @@ const OPTIONS = {
 	}
 };
 
-
 const fetchIpInfo = ip => {
     return fetch(`https://ip-reputation-geoip-and-detect-vpn.p.rapidapi.com/?${ip}`, OPTIONS)
     .then(res => res.json())
